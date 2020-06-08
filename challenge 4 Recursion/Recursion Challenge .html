@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html>
+   <head>
+ <title>Recursion Challenge</title>
+<meta charset ="UTF-8"/>
+   </head>
+   <body>
+    <script>
+    
+      function isEven(N){
+      	
+      	N = Math.abs(N);
+      	if(N == 0){
+      		return true;
+      	}
+      	else if(N == 1){
+      		return false;
+      	}
+      	else return isEven(N-2);
+      }
+    
+    
+    console.log(isEven(-1));
+    
+    </script>
+   </body>
+</html>

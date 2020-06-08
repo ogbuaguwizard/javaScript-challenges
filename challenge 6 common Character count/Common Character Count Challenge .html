@@ -1,0 +1,48 @@
+<!doctype HTML>
+<html>
+   <head>
+ <title>Common Character Count Challenge</title>
+<meta charset ="UTF-8"/>
+   </head>
+   <body>
+    <script>
+    var str1 = "AABCC";
+    var str2 = "ADCAA";
+    
+function commonCharacterCount(firstStr,secondStr){
+ if(1 <=str1.length<=15 && 1 <=str2.length<=15){
+		
+   var count = 0;
+   if(str1.length>str2.length){
+   	x = str1.toLowerCase().split("").sort();
+   	y = str2.toLowerCase().split("").sort();
+   }
+   else{
+   	x = str2.toLowerCase().split("").sort();
+   	y = str1.toLowerCase().split("").sort();
+   }
+   
+   for(i = 0; i < x.length; i++){
+   	if(!(y.length >= 1)) break;
+   	
+   	for(j = 0; j < y.length; j++){
+   		if(x[i] == y[j]){
+   			count += 1;
+   			y = y.splice((j+1));
+   			break;
+   		}
+   	}
+   	
+   }
+   console.log(count);
+ }
+ else{
+ 	console.log("your string input must be max of 15");
+ }
+}
+  
+  commonCharacterCount(str1,str2);
+      
+    </script>
+   </body>
+</html>

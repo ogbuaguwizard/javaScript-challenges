@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html>
+   <head>
+ <title>CenturyFromYear Challenge</title>
+<meta charset ="UTF-8"/>
+   </head>
+   <body>
+    <script>
+    
+      function centuryFromYear(year){
+      	
+      	if(year < 1 || year > 2005){
+      		return "Enter from year 1 to 2005";
+      	}
+      	else {
+      		
+         	if((year/100) == Math.ceil(year/100)){
+      		  return (year/100);
+      	   }
+      	   else return Math.ceil(year/100);
+           }
+      }
+    
+    
+    console.log(centuryFromYear(1905));
+    
+    </script>
+   </body>
+</html>

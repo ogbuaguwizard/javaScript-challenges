@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html>
+   <head>
+ <title>Shape Area Challenge</title>
+<meta charset ="UTF-8"/>
+   </head>
+   <body>
+    <script>
+    
+    function shapeArea(N){
+    	var side = 4;
+    	if(1 <= N &&  N <= 104){
+    		if(N == 1){
+    			return 1;
+    		}
+    	    else{
+     		return (4*(N-1))+shapeArea(N-1);
+     	   }
+    	}
+    	else{
+    		return ("input from 1 to 104");
+    	}
+    }
+ 
+   console.log(shapeArea(3));
+      
+    </script>
+   </body>
+</html>

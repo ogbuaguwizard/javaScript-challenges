@@ -1,0 +1,79 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum, range challenge </title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+       
+   <script>
+   //my range function
+   function range(start, stop, step){
+   	if(step == undefined){//makes step argument optional
+   	   step = 1;
+   	   var rangeArray = [];//an empty array
+   	   //condition to run code
+   	   if(start < stop){
+   		  //loop to do the trick
+   		  for(i = start; i <= stop; i += 1){
+   			 rangeArray.push(i);
+   	  	}
+   		  return rangeArray;
+   	   }
+   	
+   	   else{ //when my condition is not met
+   		  return "if you just want the sum with out step, make sure your second number is greater than the first";
+   	   }
+   	}   	
+   	
+//--------------------------------------------------------   	
+   
+   	else{//when step is defined
+   	    var rangeArray = [];// empty  array
+   	    if(start < stop){
+   	 	 console.log("if your 1st argument is lessthan the 2nd \nthen the 3rd must be a postive number \nfor this to run properly \nif this is done correctly,  \nthen below  is your answer \n \n");
+   		  //loop to do the trick
+   		  for(i = start;  i <= stop; i += step){
+   			rangeArray.push(i);
+   		}
+   	  	return rangeArray;
+       	}
+       	else{
+   		  console.log("if your 1st argument is greater than the 2nd \nthen the 3rd must be a nagative number \nfor this to run properly \nif this is done correctly,  \nthen below  is your answer \n \n ");
+   	  	//loop to do the trick
+   		  for(i = start;  i >= stop; i -= -step){
+   			rangeArray.push(i);
+   		  }
+   		  return rangeArray;
+   	    }
+   	}
+   }
+ //  console.log(range(1,10)); //just for test and debugging
+
+//------------------------------------------------------
+//------------------------------------------------------
+  
+   //my sum function
+   function sum(x){
+   	var arraySum = 0;//variable to hold sum
+   	//loop does the trick
+   	for(i = 0; i <= x.length-1; i++){
+   		arraySum += x[i];
+   	}
+   	
+   	return ">>>>>>> " + arraySum + " <<<<<<<";
+   }
+  //console.log(sum([1,2,3,4])); //for testing and debugging
+  
+
+console.log(sum(range(5,2,-1)));
+
+
+
+   </script>
+        
+  </body>
+</html>
+    

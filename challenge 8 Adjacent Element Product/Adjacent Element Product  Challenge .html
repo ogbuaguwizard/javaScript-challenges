@@ -1,0 +1,23 @@
+<!doctype HTML>
+<html>
+   <head>
+ <title>Adjacent Element Product Challenge</title>
+ <meta charset ="UTF-8"/>
+   </head>
+   <body>
+    <script>
+    var inputArray = [3,-6,2,-5,7,-3];
+    function adjacentElementProduct(array){
+    	var product = -Infinity;
+    	for(i = 0; i < array.length; i++){
+    		if((array[i]*array[i+1])  > product){
+    			product = (array[i]*array[i+1]);
+    		}
+    	}
+    	console.log(product);
+    }
+       adjacentElementProduct(inputArray);
+      
+    </script>
+   </body>
+</html>

@@ -1,0 +1,45 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chessboard  challenge </title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+       
+   <script>
+  
+  function chessboard(dimension){
+  	
+     var myString = "";
+     for(i = 1; i <= dimension; i++){
+         
+        for(j = 0; j < dimension; j++){
+        	
+        
+  		if(i%2!==0 && j%2==0){
+  			myString = myString.concat(" ");
+  		}
+  		else if(i%2==0 && j%2==0){
+  			myString = myString.concat("#");
+  		}
+  		else if(i%2!==0 && j%2!==0){
+  			myString = myString.concat("#");
+  		}
+  		else{
+  			myString = myString.concat(" ");
+  		}
+  	}
+  	 	myString = myString.concat("\n");
+  }
+         return myString;
+}
+  
+  console.log(chessboard(8));
+
+   </script>
+        
+  </body>
+</html>
+    
