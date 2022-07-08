@@ -1,2 +1,1 @@
-# javaScript-challenges
-challenges given to me
+## javaScript-challenges
